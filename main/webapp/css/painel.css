@@ -28,7 +28,7 @@ header {
 	text-align: center;
 }
 
-.painel button {
+.btn-patient {
 	width: 270px;
 	height: 140px;
 	background-color: var(--secondary-light);
@@ -36,6 +36,18 @@ header {
 
 	display: flex;
   	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.btn-professional{
+	width: 340px;
+	height: 60px;
+	background-color: var(--secondary-light);
+	border-radius: 14px;
+  	margin-top: 10px;
+
+	display: flex;
   	justify-content: center;
   	align-items: center;
 }
