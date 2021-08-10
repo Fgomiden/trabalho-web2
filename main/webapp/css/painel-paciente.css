@@ -1,0 +1,41 @@
+header { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.edit {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.painel {
+  height: 60vh;	
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.painel h3 {
+	text-align: center;
+}
+
+.painel button {
+	width: 270px;
+	height: 140px;
+	background-color: var(--secondary-light);
+	border-radius: 14px;
+
+	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+}
