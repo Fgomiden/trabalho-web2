@@ -13,12 +13,12 @@ public class Responsavel extends Usuario{
 	private String complemento;
 	private String cep;
 	
-	public List<Crianca> getCriancas() {
-		return criancas;
-	}
-	public void setCriancas(List<Crianca> criancas) {
-		this.criancas = criancas;
-	}
+//	public List<Crianca> getCriancas() {
+//		return criancas;
+//	}
+//	public void setCriancas(List<Crianca> criancas) {
+//		this.criancas = criancas;
+//	}
 	public String getFone1() {
 		return fone1;
 	}

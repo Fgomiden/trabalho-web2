@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:url value="/EOP/novoPaciente" var="linkServletNovoPaciente"/>
+
 <!DOCTYPE html>
 <html>
 
@@ -11,33 +14,26 @@
 <body>
     <div class="container">
         <h1>Cadastro - Paciente</h1>
-        <form action="/EOP/novoPaciente" method="POST">
+        <form action="${linkServletNovoPaciente }" method="POST">
             <label>Nome:</label>
             <input type="text" placeholder="Insira o nome" name="nome" />
-            
-            <label>Nome do Responsável:</label>
-            <input type="text" placeholder="Insira o nome" name="nomeResponsavel" />
-            
-            <label>Dentista Responsável:</label>
-            <input type="text" placeholder="Insira o nome" name="dentistaResponsavel" />
-            
+
             <label>CPF: </label>
-            <input type="number" placeholder="Insira o CPF" name="cpfPassport"/>
+            <input type="number" placeholder="Insira o CPF" />
 
             <label>E-mail: </label>
-            <input type="email" placeholder="Insira seu e-mail" name="email"/>
+            <input type="email" placeholder="Insira seu e-mail" />
 
             <label>Data de Nascimento: </label>
-            <input type="date" placeholder="Insira a data de nascimento" name="dataNasc"/>
+            <input type="date" placeholder="Insira a data de nascimento" />
 
             <label>Senha: </label>
-            <input type="password" name="senha"/>
+            <input type="password" />
 
             <label>Telefone: </label>
             <input
                 type="text"
                 placeholder="Ex.: (00) 0000-0000"
-                name="telefone"
             />
             
             <label>Celular: </label>
@@ -46,14 +42,14 @@
                 placeholder="Ex.: (00) 00000-0000"
             />
             
-            <label>Endereço: </label>
-            <input type="text" placeholder="Ex: 999.999.999-99" name="endereco"/>
-            <label>Número: </label>
-            <input type="text" placeholder="Ex: 9999" name="numero"/>
+            <label>Endere�o: </label>
+            <input type="text" placeholder="Ex: 999.999.999-99" />
+            <label>N�mero: </label>
+            <input type="text" placeholder="Ex: 9999" />
             <label>Complemento: </label>
-            <input type="text" name="complemento"/>
+            <input type="text" />
             <label>CEP: </label>
-            <input type="text" placeholder="Ex: 99.999-999" name="cep"/>
+            <input type="text" placeholder="Ex: 99.999-999" />
 
             <button type="submit">Enviar</button>
         </form>
