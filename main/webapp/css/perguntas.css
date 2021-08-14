@@ -9,12 +9,10 @@ header{
     justify-content: flex-start;
   }
 
-  .perguntas {
-    height: 60vh;	
+  .perguntas {   	
     
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .perguntas span{
@@ -25,6 +23,7 @@ header{
   .pergunta {  
     display: flex;
     align-items: center;
+    border: 2px solid blue;
   }
   
   .pergunta img{
@@ -35,13 +34,17 @@ header{
    border: 1px solid #000;
    width: 100%;
   }
-
+  
+  .enviar {  
+    display: flex;
+    flex-direction: column;
+    width:100px;
+    border: 2px solid #000;
+  }
+  
   form.perguntas button {
-	width: 100%;
-	height: 80px;
-
+  	
+	width:100px;
 	background-color: var(--secondary);
 	color: var(--text-light-color);
-
-	font-size: 1rem;
 }

@@ -22,7 +22,7 @@ public class NovoPacienteServlet extends HttpServlet {
 	     String nomeResponsavel = request.getParameter("nomeResponsavel");
 	     String dentistaResponsavel = request.getParameter("dentistaResponsavel");
 	     
-	     String cpfPaciente = request.getParameter("cpf");
+	     String cpfPaciente = request.getParameter("cpfPassport");
 	     String emailPaciente = request.getParameter("email");
 	    // Calendar dataPaciente = request.getParameter("dataNasc");
 	     String senhaPaciente = request.getParameter("senha");
@@ -51,9 +51,14 @@ public class NovoPacienteServlet extends HttpServlet {
 		 profissional.setNome(dentistaResponsavel);
 		 paciente.setDentistaResponsavel(profissional);
 		 
+		 //request.setAttribute("paciente", paciente.getNome());
 		 
-	     
-	     PrintWriter out = response.getWriter();
-	     out.println("<html><body>Paciente "+ nomePaciente + dentistaResponsavel + nomeResponsavel + cpfPaciente + emailPaciente +" cadastrado com sucesso!</body></html>");
+		 //PrintWriter out = response.getWriter();
+		 //out.println("<html><body>Paciente "+ nomePaciente + dentistaResponsavel + nomeResponsavel + cpfPaciente + emailPaciente +" cadastrado com sucesso!</body></html>");
+		 
+		 response.setContentType("text/html"); 	
+		 response.sendRedirect("login.html");		 
+		 
+	
 	}
 }
