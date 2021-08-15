@@ -1,50 +1,45 @@
-header{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
-  
-  .logo {
-    display: flex;
-    justify-content: flex-start;
-  }
+header { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .perguntas {   	
-    
-    display: flex;
-    flex-direction: column;
-  }
+.logo {
+  display: flex;
+  justify-content: flex-start;
+}
 
-  .perguntas span{
-    margin: 10px;
-    text-align: left;
-  }
-  
-  .pergunta {  
-    display: flex;
-    align-items: center;
-    border: 2px solid blue;
-  }
-  
-  .pergunta img{
-   margin-inline: 10px;
-  }
- 
-  .perguntas hr{
-   border: 1px solid #000;
-   width: 100%;
-  }
-  
-  .enviar {  
-    display: flex;
-    flex-direction: column;
-    width:100px;
-    border: 2px solid #000;
-  }
-  
-  form.perguntas button {
-  	
-	width:100px;
-	background-color: var(--secondary);
-	color: var(--text-light-color);
+.perguntas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.perguntas span {
+  margin: 10px;
+  text-align: left;
+}
+
+.pergunta {  
+  display: flex;
+  align-items: center;
+}
+
+.pergunta img {
+  margin-inline: 10px;
+  width: 150px;
+}
+
+.perguntas hr {
+  border: 1px solid #222;
+  width: 100%;
+}
+
+form.perguntas button {
+  margin-top: 15px;
+  width: 100%;
+    height: 45px;
+  background-color: var(--secondary);
+  color: var(--text-light-color);
 }

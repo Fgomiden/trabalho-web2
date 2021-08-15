@@ -3,7 +3,7 @@ package br.ufrrj.web2.model;
 import java.util.List;
 
 public class Profissional extends Usuario{
-	
+	private Integer idProfissional;
 	private String matriculaCRO;
 	private List<Atendimento> atendimentos;
 
@@ -14,11 +14,19 @@ public class Profissional extends Usuario{
 	public void setMatriculaCRO(String matriculaCRO) {
 		this.matriculaCRO = matriculaCRO;
 	}
+
+	public Integer getIdProfissional() {
+		return idProfissional;
+	}
+
+	public void setIdProfissional(Integer idProfissional) {
+		this.idProfissional = idProfissional;
+	}
 	
 	
 	
 	
-//	private Integer idProfissional;
+
 //	private Usuario profissionalResponsavel; //ex: professor
 //	private Usuario supervisor; //aluno de pós grad
 //	private Usuario aluno; //quem atendeu

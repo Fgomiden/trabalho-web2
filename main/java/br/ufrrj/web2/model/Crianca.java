@@ -8,7 +8,7 @@ public class Crianca extends Usuario{
 	private Usuario dentistaResponsavel;
 //	private Prontuario prontuario;
 	private Avatar avatar;
-//	private List<Resposta> respostas;
+	//private List<Resposta> respostas;
 	private List<Atendimento> atendimentos;
 		
 
@@ -43,5 +43,5 @@ public class Crianca extends Usuario{
 	public void setAtendimentos(List<Atendimento> atendimentos) {
 		this.atendimentos = atendimentos;
 	}
-	
+		
 }

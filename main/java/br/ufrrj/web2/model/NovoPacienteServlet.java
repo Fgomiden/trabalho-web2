@@ -2,6 +2,8 @@ package br.ufrrj.web2.model;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.Calendar;
 
 import javax.servlet.ServletException;
@@ -21,44 +23,56 @@ public class NovoPacienteServlet extends HttpServlet {
 	     String nomePaciente = request.getParameter("nome");
 	     String nomeResponsavel = request.getParameter("nomeResponsavel");
 	     String dentistaResponsavel = request.getParameter("dentistaResponsavel");
-	     
+	     String sexoPaciente = request.getParameter("sexo");
 	     String cpfPaciente = request.getParameter("cpfPassport");
 	     String emailPaciente = request.getParameter("email");
-	    // Calendar dataPaciente = request.getParameter("dataNasc");
+	     String dataPaciente = request.getParameter("dataNasc");
 	     String senhaPaciente = request.getParameter("senha");
 	     String telefone = request.getParameter("telefone");
 	     String celular = request.getParameter("celular");
 	     String endereco = request.getParameter("endereco");
 	     String numero = request.getParameter("numero");
 	     String complemento = request.getParameter("complemento");
-	     String cep = request.getParameter("cep");
-	     
-	     Paciente paciente = new Paciente();
-	     paciente.setNome(nomePaciente);
-		 paciente.setNomeResponsavel(nomeResponsavel);	
-		 paciente.setCpfPassport(cpfPaciente);
-		 paciente.setEmail(emailPaciente);
-		// paciente.setDataNasc(dataPaciente);
-		 paciente.setSenha(senhaPaciente);
-		 paciente.setTelefone(telefone);
-		 paciente.setCelular(celular);
-		 paciente.setEndereco(endereco);
-		 paciente.setNumero(numero);
-		 paciente.setComplemento(complemento);
-		 paciente.setCep(cep);
-		 //Tipo do setDentistaResponsavel é Profissional
-		 Profissional profissional = new Profissional();
-		 profissional.setNome(dentistaResponsavel);
-		 paciente.setDentistaResponsavel(profissional);
-		 
-		 //request.setAttribute("paciente", paciente.getNome());
-		 
-		 //PrintWriter out = response.getWriter();
-		 //out.println("<html><body>Paciente "+ nomePaciente + dentistaResponsavel + nomeResponsavel + cpfPaciente + emailPaciente +" cadastrado com sucesso!</body></html>");
-		 
-		 response.setContentType("text/html"); 	
-		 response.sendRedirect("login.html");		 
-		 
-	
+	     String cep = request.getParameter("cep");     
+	    
+		 try {
+	            
+	       Connection con = ConectarBanco.initializeDatabase();
+	  
+	       PreparedStatement st = con
+	       .prepareStatement("insert into pacientes (nome, nomeResponsavel, dentistaResponsavel, sexo, cpf, email, dataNasc, "
+	       		+ "senha, telefone, celular, endereco, numero, complemento, cep) "
+	       		+ "values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+	  
+	            
+	            st.setString(1, nomePaciente);
+	            st.setString(2, nomeResponsavel);
+	            st.setString(3, dentistaResponsavel);
+	            st.setString(4, sexoPaciente);
+	            st.setString(5, cpfPaciente);
+	            st.setString(6, emailPaciente);
+	            st.setString(7, dataPaciente);
+	            st.setString(8, senhaPaciente);
+	            st.setString(9, telefone);
+	            st.setString(10, celular);
+	            st.setString(11, endereco);
+	            st.setString(12, numero);
+	            st.setString(13, complemento);
+	            st.setString(14, cep);
+	            
+	            st.executeUpdate();
+	  
+	            st.close();
+	            con.close();
+	  
+	            System.out.println("Cadastrado novo paciente com sucesso");
+	            
+	            response.setContentType("text/html"); 	
+	   		 	response.sendRedirect("login.html");
+	            
+	        }
+	        catch (Exception e) {
+	            e.printStackTrace();
+	        }	 
 	}
 }

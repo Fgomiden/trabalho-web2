@@ -6,12 +6,13 @@ import java.util.List;
 public class Paciente extends Usuario{
 	private String nomeResponsavel;
 	private Profissional dentistaResponsavel;
+	private String sexo;
 	private String telefone;
 	private String celular;
 	private String endereco;
 	private String numero;
 	private String complemento;
-	private String cep;
+	private String cep;	
 	private Avatar avatar;
 	private List<Atendimento> atendimentos;
 	
@@ -26,6 +27,13 @@ public class Paciente extends Usuario{
 	}
 	public void setDentistaResponsavel(Profissional dentistaResponsavel) {
 		this.dentistaResponsavel = dentistaResponsavel;
+	}
+	
+	public String getSexo() {
+		return sexo;
+	}
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
 	}
 	public String getTelefone() {
 		return telefone;

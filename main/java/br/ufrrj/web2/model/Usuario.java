@@ -1,13 +1,10 @@
 package br.ufrrj.web2.model;
 
-import java.util.Calendar;
-
 public class Usuario {
-	// private Integer id;
 	private String nome;
 	private String cpfPassport;
 	private String email;
-	private Calendar dataNasc;
+	private String dataNasc;
 	private String senha;
 	
 	public String getNome() {
@@ -28,10 +25,10 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Calendar getDataNasc() {
+	public String getDataNasc() {
 		return dataNasc;
 	}
-	public void setDataNasc(Calendar dataNasc) {
+	public void setDataNasc(String dataNasc) {
 		this.dataNasc = dataNasc;
 	}
 	public String getSenha() {

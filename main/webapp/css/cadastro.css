@@ -42,3 +42,9 @@ button {
 button:hover {
 	background-color: var(--secondary-light);
 }
+
+.sexo{
+	display:inline-block;
+	justify-content: flex-start;
+	align-items: center;
+}
