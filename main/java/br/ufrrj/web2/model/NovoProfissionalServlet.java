@@ -61,13 +61,6 @@ public class NovoProfissionalServlet extends HttpServlet {
 	            e.printStackTrace();
 	        }
 		 		 
-		 //request.setAttribute("paciente", paciente.getNome());
-		 
-		 //PrintWriter out = response.getWriter();
-		 //out.println("<html><body>Profissional "+ nomePaciente + cpfProfissional + matriculaProfissional +" cadastrado com sucesso!</body></html>");
-		 
-		
-		 
 	}
 
 }

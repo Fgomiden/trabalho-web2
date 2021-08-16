@@ -12,58 +12,54 @@
     <div class="container">
         <h1>Cadastro - Paciente</h1>
         <form action="/EOP/novoPaciente" method="POST">
-            <label>Nome:</label>
-            <input type="text" placeholder="Insira o nome" name="nome" required/>
-            
-            <label>Nome do Responsável:</label>
-            <input type="text" placeholder="Insira o nome" name="nomeResponsavel" required/>
-            
-            <label>Dentista Responsável:</label>
-            <input type="text" placeholder="Insira o nome" name="dentistaResponsavel" required/>
-            
+            <label for="nome">Nome:</label>
+            <input type="text" placeholder="Insira o nome" name="nome" id="nome" required />
+
+            <label for="nomeResponsavel">Nome do Responsável:</label>
+            <input type="text" placeholder="Insira o nome" name="nomeResponsavel" id="nomeResponsavel" required />
+
+            <label for="dentistaResponsavel">Dentista Responsável:</label>
+            <input type="text" placeholder="Insira o nome" name="dentistaResponsavel" id="dentistaResponsavel" required />
+
             <label>Sexo: </label>
-            
-            <input class="sexo" type="radio" id="f" value="feminino" name="sexo" required/>	
-            <label class="sexo" id="f">Feminino</label>            	
-           
-            <input class="sexo" type="radio" id="m" value="masculino" name="sexo" required/>
-            <label class="sexo" id="m">Masculino</label>
-            
-            <label>CPF: </label>
-            <input type="text" placeholder="Insira o CPF" name="cpfPassport" required/>
+
+            <div id="container-sexo">
+                <input class="sexo" type="radio" id="feminino" value="feminino" name="sexo" required />
+                <label class="sexo" for="feminino">Feminino</label>
+
+                <input class="sexo" type="radio" id="masculino" value="masculino" name="sexo" required />
+                <label class="sexo" for="masculino">Masculino</label>
+            </div>
+
+            <label for="cpfPassport">CPF: </label>
+            <input type="text" placeholder="Insira o CPF" name="cpfPassport" id="cpfPassport" required />
 
             <label>E-mail: </label>
-            <input type="email" placeholder="Insira seu e-mail" name="email" required/>
+            <input type="email" placeholder="Insira seu e-mail" name="email" required />
 
-            <label>Data de Nascimento: </label>
-            <input type="date" placeholder="Insira a data de nascimento" name="dataNasc" required/>
+            <label for="dataNasc">Data de Nascimento: </label>
+            <input type="date" placeholder="Insira a data de nascimento" name="dataNasc" id="dataNasc" required />
 
-            <label>Senha: </label>
-            <input type="password" name="senha" required/>
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" id="senha" required />
 
-            <label>Telefone: </label>
-            <input
-                type="text"
-                placeholder="Ex.: (00) 0000-0000"
-                name="telefone"
-            />
-            
-            <label>Celular: </label>
-            <input
-                type="text"
-                placeholder="Ex.: (00) 00000-0000"
-                name="celular"
-                required
-            />
-            
-            <label>Endereço: </label>
-            <input type="text" placeholder="Rua dos Bobos" name="endereco" required/>
-            <label>Número: </label>
-            <input type="text" placeholder="Ex: 9999" name="numero"/>
-            <label>Complemento: </label>
-            <input type="text" name="complemento"/>
-            <label>CEP: </label>
-            <input type="text" placeholder="Ex: 99.999-999" name="cep" required/>
+            <label for="telefone">Telefone: </label>
+            <input type="text" placeholder="Ex.: (00) 0000-0000" name="telefone" id="telefone" />
+
+            <label for="celular">Celular: </label>
+            <input type="text" placeholder="Ex.: (00) 00000-0000" name="celular" id="celular" required />
+
+            <label for="endereco">Endereço: </label>
+            <input type="text" placeholder="Rua dos Bobos" name="endereco" id="endereco" required />
+
+            <label for="numero">Número: </label>
+            <input type="text" placeholder="Ex: 9999" name="numero" id="numero" />
+
+            <label for="complemento">Complemento: </label>
+            <input type="text" name="complemento" id="complemento" />
+
+            <label for="cep">CEP: </label>
+            <input type="text" placeholder="Ex: 99.999-999" name="cep" id="cep" required />
 
             <button type="submit">Enviar</button>
         </form>
@@ -71,4 +67,3 @@
 </body>
 
 </html>
-    

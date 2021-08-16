@@ -11,11 +11,16 @@
 		<img src="https://logopond.com/logos/dbd8fbd6c1d62148ebe7caac8fc842df.png"/>
 		<form class="login" action="/EOP/fazerLogin"  method="POST">
 			<label>E-mail</label>
-		  	<input type="email" placeholder="Digite seu email" />
+		  	<input type="email" placeholder="Digite seu email" name="email" required/>
 		
 		    <label>Senha</label>
-		    <input type="password" placeholder="Digite sua senha" />
-
+		    <input type="password" placeholder="Digite sua senha" name="senha" required/>
+		    
+			<input class="opcao" type="radio" id="pac" value="paciente" name="opcao" />	
+            <label class="opcao" for="pac">Sou paciente</label>   	
+            <input class="opcao" type="radio" id="pro" value="profissional" name="opcao" />
+            <label class="opcao" for="pro">Sou profissional da saúde</label>  
+            
      	 	<button type="submit">Entrar</button>
 		</form>	 	
 		<a href="./cadastro-paciente.html">Cadastrar novo paciente</a>
