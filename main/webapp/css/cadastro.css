@@ -42,9 +42,6 @@ button:hover {
 	background-color: var(--secondary-light);
 }
 
-#container-sexo{
-	margin-left: 5px;
-}
 .sexo{
 	width: auto;
 	display: inline;	

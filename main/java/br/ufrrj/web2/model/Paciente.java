@@ -2,7 +2,6 @@ package br.ufrrj.web2.model;
 
 import java.util.List;
 
-//Criei essa classe sendo uma junção das classes Crianca e Responsavel
 public class Paciente extends Usuario{
 	private String nomeResponsavel;
 	private Profissional dentistaResponsavel;
